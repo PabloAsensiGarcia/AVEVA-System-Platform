@@ -44,3 +44,4 @@ This practice simplifies the configuration of graphics, animations, and alarms, 
 While AVEVA System Platform has some limitations around data type handling—which we will explore later—the focus for now is on how to extract and decode structured data efficiently to create clear, maintainable Boolean attributes.
 
 Refer to the scripting here:
+[Bitmasking Data Structure](bitmaskingDataStructures.vb)
