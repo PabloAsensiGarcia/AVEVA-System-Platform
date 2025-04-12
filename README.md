@@ -29,4 +29,7 @@ To implement this effectively, it is important to reserve two configuration attr
 
 These configuration attributes enable the script to programmatically construct and assign the appropriate input source references at runtime.
 
+Refer to the syntax here:
+[IO Binding Script]AVEVA-System-Platform/
+
 In line with the naming conventions outlined in Section 1.1, configuration-related attributes are prefixed with cfg, ensuring clarity and consistency throughout the application structure. This approach enhances maintainability and reinforces good design practices across the object hierarchy.
