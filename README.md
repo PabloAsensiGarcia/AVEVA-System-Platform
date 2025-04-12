@@ -11,19 +11,19 @@ The content ranges from scripting patterns and best practices to design template
 - **[System Design Philosophy](System-Design-Philosophy/)**  
  Guidelines and best practices for designing scalable and maintainable System Platform applications
 
-- **[Object Naming Conventions](System-Design-Philosophy/Object-Naming-Conventions/)**  
+- **[Object Naming Conventions](https://github.com/PabloAsensiGarcia/AVEVA-System-Platform/blob/main/System-Design-Philosophy/2.%20Attribute%20Structure.md)**  
  Standardized naming conventions for attributes and objects to ensure consistency across projects
 
-- **[Dynamic IO Binding](Dynamic-IO-Binding/)**  
+- **[Dynamic IO Binding](https://github.com/PabloAsensiGarcia/AVEVA-System-Platform/blob/main/System-Design-Philosophy/3.1%20IO%20Binding%20Script.md)**  
  Techniques for assigning input sources to IO attributes dynamically when autobinding is not feasible
 
-- **[Bitmasking Data Structures](Bitmasking-Data-Structures/)**  
+- **[Bitmasking Data Structures](https://github.com/PabloAsensiGarcia/AVEVA-System-Platform/blob/main/System-Design-Philosophy/4.1%20Data%20Structures.md)**  
  Methods for decoding structured data (e.g., words, bytes) into boolean attributes for clarity and usability
 
-- **[Handling Signed Data Types](Handling-Signed-Data-Types/)**  
+- **[Handling Signed Data Types](https://github.com/PabloAsensiGarcia/AVEVA-System-Platform/blob/main/System-Design-Philosophy/4.1%20Data%20Structures.md)**  
  Workarounds for System Platform's limitations with signed integers and floating-point numbers
 
-- **[Modbus Register Reading](Modbus-Register-Reading/)**  
+- **[Modbus Register Reading](https://github.com/PabloAsensiGarcia/AVEVA-System-Platform/blob/main/System-Design-Philosophy/4.1%20Data%20Structures.md)**  
  Scripts and explanations for interpreting Modbus register pairs into meaningful values
 
 ---
