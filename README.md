@@ -11,7 +11,7 @@ The content ranges from scripting patterns and best practices to design template
 - **[System Design Philosophy](System-Design-Philosophy/)**  
  Guidelines and best practices for designing scalable and maintainable System Platform applications
 
-- **[Object Naming Conventions](Object-Naming-Conventions/)**  
+- **[Object Naming Conventions](System-Design-Philosophy/Object-Naming-Conventions/)**  
  Standardized naming conventions for attributes and objects to ensure consistency across projects
 
 - **[Dynamic IO Binding](Dynamic-IO-Binding/)**  
