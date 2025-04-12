@@ -4,9 +4,7 @@ This repository is a curated collection of development standards, scripting exam
 
 The content ranges from scripting patterns and best practices to design templates and architectural guidelines aimed at promoting clarity, scalability, and maintainability within System Platform environments. Whether you're building a system from scratch or refining an existing deployment, this repository provides actionable insights that can help accelerate development while maintaining high engineering standards.
 
-## 1. System Design Philosophy
 
-When developing in AVEVA System Platform, simplicity and structure are key. The complexity of large-scale industrial applications can escalate quickly, so it's essential to establish a clean, well-organized foundation from the start. A consistent approach to object design, attribute naming, and project layout greatly enhances both team collaboration and system maintainability.
 
 ## 1.1 Object Naming & Attribute Structure
 
