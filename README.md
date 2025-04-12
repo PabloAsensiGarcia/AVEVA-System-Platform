@@ -38,7 +38,7 @@ To explore the guidelines and examples:
 
 ---
 
-## 📄 Licens
+## 📄 License
 
 N/A
 
