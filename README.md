@@ -33,3 +33,14 @@ Refer to the syntax here:
 [IO Binding Script](bindingIOScript.vb)
 
 In line with the naming conventions outlined in Section 1.1, configuration-related attributes are prefixed with cfg, ensuring clarity and consistency throughout the application structure. This approach enhances maintainability and reinforces good design practices across the object hierarchy.
+
+### 1.2.1 IO Structures from Onsite Devices
+In most cases, the field devices you interface with will present their data in structured formats such as Words, Bytes, or DWords. This approach not only simplifies data handling and storage on the device side but also significantly reduces network traffic when the SCADA system queries the device—improving overall efficiency.
+
+However, while compact data structures are ideal for transmission, they are not always the most intuitive format for application-level logic or HMI design. To improve clarity and usability within System Platform, it is highly recommended to decode these structures into Boolean attributes within your objects. Rather than reading a word or integer and interpreting its bitwise values manually, creating individual Boolean tags for each relevant bit provides far greater transparency (unless the structure has been given an appropriate decimal definition by the data structure provider; i.e. 1-Running, 2-Stopped, 255-Failed).
+
+This practice simplifies the configuration of graphics, animations, and alarms, making it much easier to map attribute states to visual elements. Clear, descriptive Boolean attributes allow for more intuitive template creation and reduce the likelihood of errors during development.
+
+While AVEVA System Platform has some limitations around data type handling—which we will explore later—the focus for now is on how to extract and decode structured data efficiently to create clear, maintainable Boolean attributes.
+
+Refer to the scripting here:
