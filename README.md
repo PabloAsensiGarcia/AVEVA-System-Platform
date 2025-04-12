@@ -18,7 +18,7 @@ While not strict rules, the following conventions have proven highly effective i
 
 All attribute names follow **CamelCase** for readability and standardization.
 
-## 1.2 Input Source Configuration via Scripted Binding
+## 1.2 Input Source Configuration
 In scenarios where Autobinding is not feasible for a specific group of I/O points, the recommended alternative is to dynamically assign the input source of I/O attributes through a generic script placed within the template object. This method maintains scalability and reduces repetitive manual configuration across multiple instances.
 
 To implement this effectively, it is important to reserve two configuration attributes within the object template:
