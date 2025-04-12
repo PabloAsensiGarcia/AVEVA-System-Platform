@@ -32,9 +32,9 @@ Scripts and explanations for interpreting Modbus register pairs into meaningful 
 
 To explore the guidelines and examples:
 
-1 Navigate to the relevant folder listed above.
-2 Review the `README.md` file within each folder for detailed explanations and code snippet.
-3 Utilize the provided scripts and conventions in your System Platform projects to enhance development efficiency and consistency.
+1. Navigate to the relevant folder listed above.
+2. Review the `README.md` file within each folder for detailed explanations and code snippet.
+3. Utilize the provided scripts and conventions in your System Platform projects to enhance development efficiency and consistency.
 
 ---
 
