@@ -1,2 +1,2 @@
-# System Design Philosophy
+# Section Overview
 When developing in AVEVA System Platform, simplicity and structure are key. The complexity of large-scale industrial applications can escalate quickly, so it's essential to establish a clean, well-organized foundation from the start. A consistent approach to object design, attribute naming, and project layout greatly enhances both team collaboration and system maintainability.
