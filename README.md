@@ -32,4 +32,4 @@ These configuration attributes enable the script to programmatically construct a
 Refer to the syntax here:
 [IO Binding Script](bindingIOScript.vb)
 
-In line with the naming conventions outlined in Section 1.1, configuration-related attributes are prefixed with cfg, ensuring clarity and consistency throughout the application structure. This approach enhances maintainability and reinforces good design practices across the object hierarchy.
+In line with the naming conventions outlined in [Section 1.1](## 1.1 Object Naming & Attribute Structure), configuration-related attributes are prefixed with cfg, ensuring clarity and consistency throughout the application structure. This approach enhances maintainability and reinforces good design practices across the object hierarchy.
