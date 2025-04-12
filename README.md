@@ -4,6 +4,8 @@ This repository is a curated collection of development standards, scripting exam
 
 The content ranges from scripting patterns and best practices to design templates and architectural guidelines aimed at promoting clarity, scalability, and maintainability within System Platform environments. Whether you're building a system from scratch or refining an existing deployment, this repository provides actionable insights that can help accelerate development while maintaining high engineering standards.
 
+This repository is continuously evolving—I'll keep updating it as my experience grows and new insights emerge.
+
 ---
 
 ## 📂 Repository Structure
@@ -56,8 +58,6 @@ For more information refer to:
 
 ## 📦 Installation & Configuration
 
-The `Installation-Setup/` directory provides detailed instructions for:
-
 - **Prerequisites & Preparation**: System requirements, supported clients, and network configuration.
 
 - **Licensing**: Setup and activation of the AVEVA Enterprise License Server.
@@ -79,8 +79,6 @@ The `Installation-Setup/` directory provides detailed instructions for:
 ---
 
 ## 🧰 Scripting & Automation
-
-The `Scripting-Patterns/` directory offers:
 
 - **Standardized Code Snippets**: Common scripting patterns for automation tasks.
 
