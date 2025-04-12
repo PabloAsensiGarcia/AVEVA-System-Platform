@@ -42,7 +42,7 @@ To explore the guidelines and examples:
 
 N/A
 
---
+---
 
 For any questions or suggestions, feel free to open an issue or submit a pull request.
 
