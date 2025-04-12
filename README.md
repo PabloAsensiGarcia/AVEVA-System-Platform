@@ -45,3 +45,36 @@ While AVEVA System Platform has some limitations around data type handling—whi
 
 Refer to the scripting here:
 [Bitmasking Data Structure](bitmaskingDataStructures.vb)
+
+### 1.2.2 Data Structure Limitations
+AVEVA System Platform has limited native support for data types, particularly when it comes to handling signed integers. Based on my experience, attempting to read signed values—such as those stored in 16-bit or 32-bit signed registers—from field devices often leads to incorrect readings or erratic values. This issue stems from the platform's restricted data type support.
+
+System Platform supports only nine data types: Boolean, Integer, Float, Double, String, Time, ElapsedTime, InternationalizedString, and BigString. Unfortunately, all numerical data types are treated as unsigned, which means that signed values—such as 32-bit signed integers (e.g., IEEE 754 encoded floats or PLC DINT types)—are not interpreted correctly. As a result, the system may display nonsensical values or even return bad quality signals when attempting to read such data directly.
+
+The appropriate solution depends largely on both the device type and the communication driver being used. For instance, in my experience working with both Siemens (SIDIRECT) and Modbus TCP (MBTCP) drivers, each requires a different approach:
+
+SIDIRECT (Siemens):
+When reading DWORD, DINT, or any 32-bit signed value, referencing the address directly (e.g., DBxx,DWORDyyy) can lead to either invalid data or bad signal quality. A more reliable method involves breaking down the 32-bit structure into smaller, manageable parts. Instead of referencing the problematic DWORD, split it into two WORDs (e.g., DBxx,WORDyy and DBxx,WORDzz) or into four BYTEs (e.g., DBxx,BYTEaa, BYTEbb, BYTEcc, BYTEdd). You can then reconstruct or interpret the value as needed in your logic or scripts.
+
+MBTCP (Modbus):
+Modbus communication can present additional challenges when dealing with floating-point or 32-bit values, particularly those following the IEEE 754 standard. In my experience, these values are typically split across two consecutive 16-bit Modbus registers. When read directly, the data in each register may appear erratic or unintelligible, making it unclear how to extract meaningful values.
+
+The root of the issue lies in byte and word ordering. To correctly interpret the data:
+
+Identify the two 16-bit registers that make up the 32-bit value.
+
+Swap their order to account for the correct word significance—i.e., transform (R1, R2) into (R2, R1) if required by the device's register layout.
+
+Combine the swapped registers into a single 32-bit integer.
+
+Use a function or conversion utility—such as a Microsoft .NET class method—to reinterpret the resulting integer as a floating-point number based on the IEEE 754 standard.
+
+This conversion allows you to accurately extract the original float value from the device. Keep in mind that Modbus devices may differ in how they handle endianness (word and byte order), so validating the expected format from the device documentation is essential.
+
+These are the raw values from the MBTCP driver:
+{Post picture}
+
+Refer to the script below to show how to reassign:
+[Modbus Register Reading](modbusRegRead.vb)
+
+This approach allows greater control and accuracy when working around the platform's data type limitations, and ensures that values are interpreted correctly and reliably.
