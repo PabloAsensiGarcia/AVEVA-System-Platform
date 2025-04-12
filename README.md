@@ -18,12 +18,15 @@ While not strict rules, the following conventions have proven highly effective i
 
 All attribute names follow **CamelCase** for readability and standardization.
 
+## 1.2 Input Source Configuration via Scripted Binding
+In scenarios where Autobinding is not feasible for a specific group of I/O points, the recommended alternative is to dynamically assign the input source of I/O attributes through a generic script placed within the template object. This method maintains scalability and reduces repetitive manual configuration across multiple instances.
 
+To implement this effectively, it is important to reserve two configuration attributes within the object template:
 
-# 1.2 Assign IO with Startup script if autobind not available or applicable
+`cfgDeviceName` – Represents the Device Integration (DI) object name.
 
-If Autobinding is not an option for a specific group of IO, the next best thing is to assign the input source of an IO attribute from a generic script that lives in the template object.
+`cfgScanGroup` – Specifies the scan group within the device.
 
-In order to create something like this, it is essential to reserve 2 configuration attributes for the Device Integration Device Name and the Scan Group of said device.
+These configuration attributes enable the script to programmatically construct and assign the appropriate input source references at runtime.
 
-Following Section 1.1 - we will use a sustainable attribute naming convention such that the attributes related to configuration of the object will start with cfg
+In line with the naming conventions outlined in Section 1.1, configuration-related attributes are prefixed with cfg, ensuring clarity and consistency throughout the application structure. This approach enhances maintainability and reinforces good design practices across the object hierarchy.
