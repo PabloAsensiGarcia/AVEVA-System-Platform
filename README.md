@@ -25,25 +25,96 @@ Workarounds for System Platform's limitations with signed integers and floating-
 
 - **[Modbus Register Reading](https://github.com/PabloAsensiGarcia/AVEVA-System-Platform/blob/main/System-Design-Philosophy/4.1%20Data%20Structures.md)**  
 Scripts and explanations for interpreting Modbus register pairs into meaningful values
+Certainly! Here's an updated version of the `README.md` file for the [AVEVA-System-Platform](https://github.com/PabloAsensiGarcia/AVEVA-System-Platform) repository. This revision incorporates key insights from the AVEVA System Platform Installation Guide (2023 R2 SP1) and aligns with best practices for system architecture and deployment.
 
 ---
 
-## 🔗 Getting Started
+## 🏗️ System Architecture Best Practices
 
-To explore the guidelines and examples:
+Designing an effective AVEVA System Platform architecture involves strategic distribution of roles and components. Key considerations include:
 
-1. Navigate to the relevant folder listed above.
-2. Review the `README.md` file within each folder for detailed explanations and code snippet.
-3. Utilize the provided scripts and conventions in your System Platform projects to enhance development efficiency and consistency.
+- **Role-Based Distribution**: Assign specific roles to nodes, such as Galaxy Repository Server, IDE Client Node, Application Object Servers (AppEngines), InTouch Runtime Nodes, Historian Node, License Server, and System Monitor Manager/Agent.
+
+- **Separation of Critical Roles**: Host the Galaxy Repository, Historian, and License Server on separate nodes to enhance performance and security.
+
+- **Redundancy**: Implement redundant configurations for AppEngines and License Servers to ensure high availability.
+
+- **Network Configuration**: Ensure proper network setup with static IPs or reserved DNS, and configure firewalls to allow necessary ports.
+
+- **Scalability**: Plan for scalability by considering scan rates, I/O loads, and tag counts across AppEngines.
+
+- **System Monitoring**: Deploy System Monitor Agents on all nodes and centralize monitoring through the System Monitor Manager.
+
+- **Backup & Recovery**: Regularly back up the Galaxy Repository and test restore procedures for critical components.
+
+- **Development Lifecycle Management**: Maintain separate environments for development, staging, and production, and manage object templates with version control.
+
+For more information refer to: 
+[System Architecture](https://github.com/PabloAsensiGarcia/AVEVA-System-Platform/tree/main/System-Architecture)
+
+---
+
+## 📦 Installation & Configuration
+
+The `Installation-Setup/` directory provides detailed instructions for:
+
+- **Prerequisites & Preparation**: System requirements, supported clients, and network configuration.
+
+- **Licensing**: Setup and activation of the AVEVA Enterprise License Server.
+
+- **Installing Core Components**: Step-by-step installation of Application Server, IDE, Historian, and more.
+
+- **System Platform Configuration**: Configurator setup, license mode, identity management, and historian settings.
+
+- **Upgrade & Repair**: Guidelines for upgrading components and repairing installations.
+
+- **Uninstallation Procedures**: Instructions for component-by-component uninstallation and complete system removal.
+
+- **Security & Permissions**: Network account setup, SQL Server security modes, and OS-level permissions.
+
+- **SQL Server Configuration**: Port and firewall settings, handling preinstalled versions, and custom configurations.
+
+- **Silent Installations & Automation**: Creating response files and automating installations.
+
+---
+
+## 🧰 Scripting & Automation
+
+The `Scripting-Patterns/` directory offers:
+
+- **Standardized Code Snippets**: Common scripting patterns for automation tasks.
+
+- **Error Handling Templates**: Templates to manage and log errors effectively.
+
+- **Performance Optimization Scripts**: Scripts designed to enhance system performance.
+
+For more information please refer to:
+[System Design Philosophy](https://github.com/PabloAsensiGarcia/AVEVA-System-Platform/tree/main/System-Design-Philosophy)
+
+---
+
+## 🎨 Templates & Utilities
+
+- **Templates/**: Ready-to-use templates for objects, graphics, and applications to streamline development.
+
+- **Utilities/**: A collection of tools and scripts for system monitoring, diagnostics, and maintenance tasks.
 
 ---
 
 ## 📄 License
 
-N/A
+N/A.
 
 ---
 
-For any questions or suggestions, feel free to open an issue or submit a pull request.
+## 🤝 Contributing
 
---- 
+Contributions are welcome! Please fork the repository and submit a pull request with your proposed changes.
+
+---
+
+## 📬 Contact
+
+For questions or suggestions, please open an issue in this repository.
+
+---
